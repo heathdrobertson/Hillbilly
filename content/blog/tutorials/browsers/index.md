@@ -1,4 +1,5 @@
 ---
+image: "globe.png"
 title: "Browsers"
 date: 2023-08-09T19:05:32Z
 description: "Browser tutorials and security. Fusce lacus magna, maximus nec sapien eu, porta efficitur neque. Aliquam erat volutpat. Vestibulum enim nibh, posuere eu diam nec, varius sagittis turpis."

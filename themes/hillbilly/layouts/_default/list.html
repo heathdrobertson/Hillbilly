@@ -5,7 +5,7 @@
         {{ range .Pages }}
         <div class="col-sm-6 mb-3 mb-sm-0">
             <div class="card mb-3">
-        {{ with .Resources.GetMatch "tools.jpg" }}
+        {{ with .Resources.GetMatch .Page.Params.Image }}
           <img src="data:{{ .MediaType.Type }};base64,{{ .Content | base64Encode }}" alt="" class="card-img-top">
         {{ end }}
                 <div class="card-body">
