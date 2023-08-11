@@ -10,7 +10,9 @@
         {{ end }}
                 <div class="card-body">
                     <h5 class="card-title">{{ .Title }}</h5>
+                    <article>
                     <p class="card-text">{{ .Page.Summary }}</p>
+                    </article>
                     <a href="{{ .RelPermalink }}" class="btn btn-primary">{{ .Page.Name }}</a>
                 </div>
                 <div class="card-footer text-body-secondary">

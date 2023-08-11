@@ -1,4 +1,5 @@
 ---
+image: "wallet.png"
 title: "Wallets"
 date: 2023-08-08T22:02:33Z
 descritpion: 'Crypto wallet tutorial and security. Sometimes you just need something small to get the job done.'
