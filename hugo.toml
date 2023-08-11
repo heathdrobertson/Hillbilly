@@ -1,0 +1,11 @@
+baseURL = 'https://hillbilly.rockinghat.com/'
+languageCode = 'en-us'
+title = 'Hillbilly IT'
+theme = 'hillbilly'
+
+[params]
+  author = "Heath Robertson"
+  favicon = ""
+  site_logo = ""
+  description = "Hillbilly IT Hugo Theme"
+  recent_posts_number = 3
