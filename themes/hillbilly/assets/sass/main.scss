@@ -35,3 +35,23 @@ $font-family-code:            var(--#{$prefix}font-monospace);
 article {
     text-align: justify;
 }
+
+#TableOfContents > ul {
+      list-style-type: none;
+}
+#TableOfContents > ul > li > ul {
+      list-style-type: none;
+}
+#TableOfContents > ul > li > a {
+      @extend .link-success;
+      @extend .link-offset-2;
+      @extend .link-underline-opacity-0;
+      @extend .link-underline-opacity-50-hover;
+}
+
+#TableOfContents > ul > li > ul > li > a {
+      @extend .link-success;
+      @extend .link-offset-2;
+      @extend .link-underline-opacity-0;
+      @extend .link-underline-opacity-50-hover;
+}

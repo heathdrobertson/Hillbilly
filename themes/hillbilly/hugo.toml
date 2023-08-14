@@ -21,25 +21,28 @@ disableAliases = true
 [module.hugoVersion]
     min = "0.56.0"
 
+[menu]
 [[menu.main]]
     name = "Home"
-    weight = -120
-    identifier = "home"
-    url = "/"
+    weight = 10
+    pageRef = "/"
 [[menu.main]]
     name = "Blog"
-    weight = -110
-    identifier = "Blog"
-    url = "/blog/"
+    weight = 20
+    pageRef = "/blog"
 [[menu.main]]
     name = "About"
-    weight = -100
-    identifier = "about"
-    url = "/about/"
+    weight = 30
+    pageRef = "/about"
 [[menu.main]]
     name = "Contact"
-    weight = -90
-    url = "/contact/"
+    weight = 40
+    pageRef = "/contact"
+
+[taxonomies]
+  category = 'categories'
+  series = 'series'
+  tag = 'tags'
 
 [params]
     hide_footer = true 

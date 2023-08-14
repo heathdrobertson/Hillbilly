@@ -1,8 +1,6 @@
 {{ define "main" }}
 
 <main class="px-3">
-
-
     {{ $asset := resources.Get "images/Hillbilly-IT-Logo.png" }}
     {{ $img := $asset.Fit "600x600" }}
     <img src="{{ $img.RelPermalink }}" class="img-fluid" alt="Hillbilly IT Logo">
@@ -21,7 +19,6 @@
     <p class="lead"> {{ .Page.Description }} </p>
     <p class="home_page_content"> {{ .Content }} </p>
     </article>
-
 </main>
 
 {{ end }}

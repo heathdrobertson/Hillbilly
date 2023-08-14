@@ -1,10 +1,12 @@
 ---
-title: "Third"
+image: "cornbread.jpg"
+title: "Cornbread"
 date: 2023-08-09T20:25:44Z
-description: "In vel ligula tortor. Aliquam erat volutpat. Pellentesque at felis eu quam tincidunt dignissim. Nulla facilisi."
+description: "Country Cornbread Recipe"
 categories: ['recipes', 'bread']
 tags: ['tag1', 'tag2', 'tag3', 'tag4']
 weight: 10
+css_id: "cornbread"
 draft: false 
 ---
 

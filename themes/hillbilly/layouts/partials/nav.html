@@ -17,20 +17,49 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 {{ range .Site.Menus.main }}
                 {{ if .HasChildren }}
+
+                <!-- Top level nav with Children -->
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="{{ .URL }}" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" 
+                    href="{{ .URL }}" 
+                    role="button" 
+                    data-bs-toggle="dropdown" 
+                    aria-expanded="false">
+                    {{ .Name }}
+                </a>
+                <!-- Children of top level nav -->
+                <ul class="dropdown-menu">
+                    {{ range .Children }}
+                    {{ if .HasChildren }}
+
+                    <!-- Children of Children -->
+                    <ul class="dropdown-menu">
+                    <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" 
+                        href="{{ .URL }}" 
+                        role="button" 
+                        data-bs-toggle="dropdown" 
+                        aria-expanded="false">
                         {{ .Name }}
                     </a>
-                    <ul class="dropdown-menu">
-                        {{ range .Children }}
-                        <li><a class="dropdown-item" href="{{ .URL }}">{{ .Name }}</a></li>
-                        {{ end }}
+                    </li>
                     </ul>
+
+                    {{ else }}
+                    <!-- Children of Top Level -->
+                    <li><a class="dropdown-item" href="{{ .URL }}">{{ .Name }}</a></li>
+                    {{ end }}
+                    {{ end }}
+                </ul>
                 </li>
+
                 {{ else }}
+
+                <!-- Top level nav no Children -->
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="{{ .Name }}" href="{{ .URL }}">{{ .Name }}</a>
                 </li>
+
                 {{ end }}
                 {{ end }}
             </ul>

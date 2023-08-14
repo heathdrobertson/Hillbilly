@@ -1,14 +1,30 @@
 {{ define "main" }}
 <div class="row">
-    <div class="card mb-3">
+    <div class="card m-0 p-0">
         <img src="{{ .Page.Params.Image }}" class="card-img-top">
         <div class="card-body">
             <h5 class="card-title">{{ .Title }}</h5>
             <p class="card-text" style="text-align: justify; text-justify: inter-word;">
-            <p>{{ .Description }}</p>
-            <article>{{ .Content }}</article>
+            <p class="lead">{{ .Description }}</p>
+            <article>
+                <aside>
+                    {{ .TableOfContents }}
+                </aside>
+                {{ .Content }}
+            </article>
             </p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <nav aria-label="breadcrumb" style="--bs-breadcrumb-divider: '>';">
+                <ol class="breadcrumb">
+                    {{ range .Ancestors.Reverse }}
+                    <li class="breadcrumb-item">
+                        <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+                    </li>
+                    {{ end }}
+                    <li class="breadcrumb-item active" aria-current="page">
+                        <a aria-current="page" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+                    </li>
+                </ol>
+            </nav>
         </div>
     </div>
 </div>

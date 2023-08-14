@@ -2,10 +2,12 @@
 image: "wallet.png"
 title: "Wallets"
 date: 2023-08-08T22:02:33Z
-descritpion: 'Crypto wallet tutorial and security. Sometimes you just need something small to get the job done.'
-categories: ['cat1', 'cat2']
-tags: ['tag1', 'tag2', 'tag3', 'tag4']
+descritpion: 'Crypto wallet tutorial and security.'
+categories: ['wallets', 'crypto']
+series: "Crypto"
+tags: ['cardano', 'ada', 'wallet']
 weight: 30
+css_id: "wallets"
 draft: false 
 ---
 ## Wallet tutorial

@@ -1,0 +1,30 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+<div class="container text-center">
+    <div class="row">
+        {{ range .Pages }}
+        <div class="col-sm-6 mb-3 mb-sm-0">
+            <div class="card mb-3">
+                <div class="card-header text-body-secondary">
+                </div>
+        {{ with .Resources.GetMatch .Page.Params.Image }}
+          <img src="data:{{ .MediaType.Type }};base64,{{ .Content | base64Encode }}" alt="" class="card-img-top">
+        {{ end }}
+                <div class="card-body">
+                    <h5 class="card-title">{{ .Title }}</h5>
+                    <article>
+                    <p class="card-text">{{ .Page.Summary }}</p>
+                    </article>
+                    <a href="{{ .RelPermalink }}" class="btn btn-primary">{{ .Page.Name }}</a>
+                </div>
+                <div class="card-footer text-body-secondary">
+                    {{ range .Keywords }}
+                    {{- . }}
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</div>
+{{ end }}
