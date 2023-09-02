@@ -5,6 +5,7 @@ menu:
   main:
     parent: "Blog" 
     weight: 20
+css_id: "tutorials"
 draft: false 
 ---
 

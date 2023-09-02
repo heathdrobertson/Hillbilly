@@ -16,7 +16,27 @@
                 </button>
             </h2>
             <div id="flush-collapse{{ .Params.css_id }}" class="accordion-collapse collapse" data-bs-parent="#{{ .Params.css_id }}">
-                <div class="accordion-body text-start">{{ .Page.Summary }}</div>
+                <div class="accordion-body text-start">
+
+
+                    <div class="card border-white mb-3">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                {{ if .Page.Params.image }}
+                                <img src="{{ .RelPermalink }}{{.Page.Params.image }}" class="img-fluid" alt="...">
+                                {{ end }}
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ .Page.Title }}</h5>
+                                    <p class="card-text">{{ .Page.Summary }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
                 <div>
                     <a href="{{ .RelPermalink }}" class="btn btn-primary mb-3">{{ .Page.Name }}</a>
                 </div>
@@ -24,6 +44,5 @@
         </div>
     </div>
     {{ end }}
-
 </div>
 {{ end }}

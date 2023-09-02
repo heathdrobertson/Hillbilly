@@ -3,12 +3,13 @@ image: "tools.jpg"
 title: "Tools"
 date: 2023-08-07T17:41:24Z
 description: "Web Design Tools Used"
-categories: ['cat1', 'cat2']
+categories: ['web', 'cat2']
 tags: ['tag1', 'tag2', 'tag3', 'tag4']
 weight: 10
 css_id: "tools"
 draft: false 
 ---
+Tools used to build the Hillbilly Theme, Hugo Site & Template.
 
 ___
 ## Hugo
